@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Nav, Navbar } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import StarRating from "../starRating/StarRating";
 
 const Filter = ({ handleSearch, search, fil, handleRating }) => {
@@ -15,7 +16,9 @@ const Filter = ({ handleSearch, search, fil, handleRating }) => {
               justifyContent: "space-between",
             }}
           >
-            <Nav.Link href="#home">K.movies</Nav.Link>
+            <Link to={"/"}>
+              <Nav.Link href="#home">K.movies</Nav.Link>
+            </Link>
             <div>
               <input type="text" value={search} onChange={handleSearch} />
               <h1>
